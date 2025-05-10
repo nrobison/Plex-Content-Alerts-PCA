@@ -1,6 +1,13 @@
+
 const webhookReceived = async(req, res) => {
-    console.log("We got a post to /plexwebhook")
-    res.status(200).json({message: "success"})
+   
+    //Multer processes the data and we read from request body payload. 
+    var plexData = JSON.parse(req.body.payload)
+    
+    //console.log(plexData)
+
+    //Respond with 200 
+    res.send(200)
 }
 
 module.exports = {
