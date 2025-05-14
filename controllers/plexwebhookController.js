@@ -5,7 +5,7 @@ const webhookReceived = async(req, res) => {
     var plexData = JSON.parse(req.body.payload)
     
     //console.log(plexData)
-
+    console.dir(plexData, {depth: null, colors: true}); //fully expanded nested data (deep objects) - this isn't expanded by default with console.log
     //Respond with 200 
     res.send(200)
 }

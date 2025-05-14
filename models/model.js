@@ -1,6 +1,7 @@
 /* 
 Data models for Plex Alerts
 */
+export { PlexWebhookPayload, MetadataModel, PersonModel, AccountModel, ServerModel, PlayerModel, ImageModel, GuidModel, RatingModel, RoleModel, UltraBlurColorsModel };
 
 //filter is 'actor' for instance
 //tag is the name of the ACTUAL ACTOR - Omar Epps play's Dr. Forman, tag is Omar Epps - it is ACTUAL NAMES
@@ -65,7 +66,7 @@ class RatingModel {
 }
 
 //Role in this case is the actor's character name in the film, movie, or series
-class RoleModel extends Person {
+class RoleModel extends PersonModel {
   constructor({ id, filter, tag, tagKey, role, thumb }) {
     super({ id, filter, tag, tagKey, thumb });
     this.role = role;
@@ -87,56 +88,56 @@ class UltraBlurColorsModel {
 
 class MetadataModel { 
   constructor(data) {
-    Object.assign(this, data); //data copied over if not specified-shallow copy-redundant but safe incase something is missed
+   Object.assign(this, data); //data copied over if not specified-shallow copy-redundant but safe incase something is missed
     this.Image = (data.Image || []).map(img => new ImageModel(img)); //complex fields
     this.UltraBlurColors = new UltraBlurColorsModel(data.UltraBlurColors || {});
-    this.Guid = (data.Guid || []).map(g => new GuidModel(g));
+    this.Guid = (data.Guid || []).map(g => new GuidModel(g)); 
     this.Rating = (data.Rating || []).map(r => new RatingModel(r));
-    this.Director = (data.Director || []).map(d => new Person(d));
-    this.Writer = (data.Writer || []).map(w => new Person(w));
+    this.Director = (data.Director || []).map(d => new PersonModel(d));
+    this.Writer = (data.Writer || []).map(w => new PersonModel(w));
     this.Role = (data.Role || []).map(r => new RoleModel(r));
-    this.Producer = (data.Producer || []).map(p => new Person(p));
+    this.Producer = (data.Producer || []).map(p => new PersonModel(p));
     //nested structures are with the are mapped below is unnested fields
 
-    this.librarySectionType = data.librarySectionType; //flat fields
-    this.ratingKey = data.ratingKey;
-    this.key = data.key;
-    this.parentRatingKey = data.parentRatingKey;
-    this.grandparentRatingKey = data.grandparentRatingKey;
-    this.guid = data.guid;
-    this.parentGuid = data.parentGuid;
-    this.grandparentGuid = data.grandparentGuid;
-    this.grandparentSlug = data.grandparentSlug;
-    this.type = data.type;
-    this.title = data.title;
-    this.titleSort = data.titleSort;
-    this.grandparentKey = data.grandparentKey;
-    this.parentKey = data.parentKey;
-    this.librarySectionTitle = data.librarySectionTitle;
-    this.librarySectionID = data.librarySectionID;
-    this.librarySectionKey = data.librarySectionKey;
-    this.grandparentTitle = data.grandparentTitle;
-    this.parentTitle = data.parentTitle;
-    this.contentRating = data.contentRating;
-    this.summary = data.summary;
-    this.index = data.index;
-    this.parentIndex = data.parentIndex;
-    this.audienceRating = data.audienceRating;
-    this.viewOffset = data.viewOffset;
-    this.lastViewedAt = data.lastViewedAt;
-    this.year = data.year;
-    this.thumb = data.thumb;
-    this.art = data.art;
-    this.parentThumb = data.parentThumb;
-    this.grandparentThumb = data.grandparentThumb;
-    this.grandparentArt = data.grandparentArt;
-    this.grandparentTheme = data.grandparentTheme;
-    this.duration = data.duration;
-    this.originallyAvailableAt = data.originallyAvailableAt;
-    this.addedAt = data.addedAt;
-    this.updatedAt = data.updatedAt;
-    this.audienceRatingImage = data.audienceRatingImage;
-    this.chapterSource = data.chapterSource;
+    // this.librarySectionType = data.librarySectionType; //flat fields
+    // this.ratingKey = data.ratingKey;
+    // this.key = data.key;
+    // this.parentRatingKey = data.parentRatingKey;
+    // this.grandparentRatingKey = data.grandparentRatingKey;
+    // this.guid = data.guid;
+    // this.parentGuid = data.parentGuid;
+    // this.grandparentGuid = data.grandparentGuid;
+    // this.grandparentSlug = data.grandparentSlug;
+    // this.type = data.type;
+    // this.title = data.title;
+    // this.titleSort = data.titleSort;
+    // this.grandparentKey = data.grandparentKey;
+    // this.parentKey = data.parentKey;
+    // this.librarySectionTitle = data.librarySectionTitle;
+    // this.librarySectionID = data.librarySectionID;
+    // this.librarySectionKey = data.librarySectionKey;
+    // this.grandparentTitle = data.grandparentTitle;
+    // this.parentTitle = data.parentTitle;
+    // this.contentRating = data.contentRating;
+    // this.summary = data.summary;
+    // this.index = data.index;
+    // this.parentIndex = data.parentIndex;
+    // this.audienceRating = data.audienceRating;
+    // this.viewOffset = data.viewOffset;
+    // this.lastViewedAt = data.lastViewedAt;
+    // this.year = data.year;
+    // this.thumb = data.thumb;
+    // this.art = data.art;
+    // this.parentThumb = data.parentThumb;
+    // this.grandparentThumb = data.grandparentThumb;
+    // this.grandparentArt = data.grandparentArt;
+    // this.grandparentTheme = data.grandparentTheme;
+    // this.duration = data.duration;
+    // this.originallyAvailableAt = data.originallyAvailableAt;
+    // this.addedAt = data.addedAt;
+    // this.updatedAt = data.updatedAt;
+    // this.audienceRatingImage = data.audienceRatingImage;
+    // this.chapterSource = data.chapterSource;
   }
 }
 //add more meta data that isn't parent, so add like library and such
