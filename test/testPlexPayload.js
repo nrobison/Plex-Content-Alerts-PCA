@@ -1,7 +1,7 @@
-import { expect } from 'chai';
+import {expect } from 'chai';
 
 import { PlexWebhookPayload } from '../models/model.js';
-import sampleWebhook from './sampleWebhook.json' assert { type: 'json' };
+import sampleWebhook from './sampleWebhook.json' with { type: 'json' };
 
 describe('PlexWebhookPayload Model', () => {
   it('should parse the correct payload and map key fields', () => { //using maps for complex objects, and flat fields both work equally as well
