@@ -97,50 +97,10 @@ class MetadataModel {
     this.Writer = (data.Writer || []).map(w => new PersonModel(w));
     this.Role = (data.Role || []).map(r => new RoleModel(r));
     this.Producer = (data.Producer || []).map(p => new PersonModel(p));
-    //nested structures are with the are mapped below is unnested fields
-
-    // this.librarySectionType = data.librarySectionType; //flat fields
-    // this.ratingKey = data.ratingKey;
-    // this.key = data.key;
-    // this.parentRatingKey = data.parentRatingKey;
-    // this.grandparentRatingKey = data.grandparentRatingKey;
-    // this.guid = data.guid;
-    // this.parentGuid = data.parentGuid;
-    // this.grandparentGuid = data.grandparentGuid;
-    // this.grandparentSlug = data.grandparentSlug;
-    // this.type = data.type;
-    // this.title = data.title;
-    // this.titleSort = data.titleSort;
-    // this.grandparentKey = data.grandparentKey;
-    // this.parentKey = data.parentKey;
-    // this.librarySectionTitle = data.librarySectionTitle;
-    // this.librarySectionID = data.librarySectionID;
-    // this.librarySectionKey = data.librarySectionKey;
-    // this.grandparentTitle = data.grandparentTitle;
-    // this.parentTitle = data.parentTitle;
-    // this.contentRating = data.contentRating;
-    // this.summary = data.summary;
-    // this.index = data.index;
-    // this.parentIndex = data.parentIndex;
-    // this.audienceRating = data.audienceRating;
-    // this.viewOffset = data.viewOffset;
-    // this.lastViewedAt = data.lastViewedAt;
-    // this.year = data.year;
-    // this.thumb = data.thumb;
-    // this.art = data.art;
-    // this.parentThumb = data.parentThumb;
-    // this.grandparentThumb = data.grandparentThumb;
-    // this.grandparentArt = data.grandparentArt;
-    // this.grandparentTheme = data.grandparentTheme;
-    // this.duration = data.duration;
-    // this.originallyAvailableAt = data.originallyAvailableAt;
-    // this.addedAt = data.addedAt;
-    // this.updatedAt = data.updatedAt;
-    // this.audienceRatingImage = data.audienceRatingImage;
-    // this.chapterSource = data.chapterSource;
+    
   }
 }
-//add more meta data that isn't parent, so add like library and such
+
 
 class PlexWebhookPayload {
   constructor({ event, user, owner, Account, Server, Player, Metadata }) {
