@@ -1,0 +1,264 @@
+{
+  "event": "media.pause",
+  "user": true,
+  "owner": true,
+  "Account": {
+    "id": 948245192,
+    "thumb": "https://plex.tv/users/723036p032a1f0581/avatar?c=1790572931",
+    "title": "pancakeOCEAN"
+  },
+  "Server": {
+    "title": "OceanPlex",
+    "uuid": "4gt6245524f9a72472xdf6c67a434e2183c47c61"
+  },
+  "Player": {
+    "local": true,
+    "publicAddress": "53.92.187.23",
+    "title": "Waffles",
+    "uuid": "4d5dct74ljkhw3odkwvby3x3"
+  },
+  "Metadata": {
+    "librarySectionType": "show",
+    "ratingKey": "7712",
+    "key": "/library/metadata/7712",
+    "parentRatingKey": "7702",
+    "grandparentRatingKey": "7701",
+    "guid": "plex://episode/5d9c12773c3f87001f3bf920",
+    "parentGuid": "plex://season/602e67adc47d69002c8bab9a",
+    "grandparentGuid": "plex://show/5d9c086c02391c001f5891b7",
+    "grandparentSlug": "house",
+    "type": "episode",
+    "title": "The Socratic Method",
+    "titleSort": "Socratic Method",
+    "grandparentKey": "/library/metadata/7701",
+    "parentKey": "/library/metadata/7702",
+    "librarySectionTitle": "TV Shows",
+    "librarySectionID": 2,
+    "librarySectionKey": "/library/sections/2",
+    "grandparentTitle": "House",
+    "parentTitle": "Season 1",
+    "contentRating": "TV-14",
+    "summary": "When it appears that Lucy Palmeiro, a schizophrenic mom with deep vein thrombosis, is lying about her alcohol intake, Dr. House is the lone voice of reason. Under the scrutiny of her hyper-vigilant teenage son, House takes Lucy off all her medications and secretly sends Foreman and Chase to search her apartment for clues.",
+    "index": 6,
+    "parentIndex": 1,
+    "audienceRating": 7.8,
+    "viewOffset": 789000,
+    "lastViewedAt": 1746851104,
+    "year": 2004,
+    "thumb": "/library/metadata/7712/thumb/1746781386",
+    "art": "/library/metadata/7701/art/1746651281",
+    "parentThumb": "/library/metadata/7702/thumb/1746651282",
+    "grandparentThumb": "/library/metadata/7701/thumb/1746651281",
+    "grandparentArt": "/library/metadata/7701/art/1746651281",
+    "grandparentTheme": "/library/metadata/7701/theme/1746651281",
+    "duration": 2640000,
+    "originallyAvailableAt": "2004-12-21",
+    "addedAt": 1746654071,
+    "updatedAt": 1746781386,
+    "audienceRatingImage": "themoviedb://image.rating",
+    "chapterSource": "media",
+    "Image": [
+      {
+        "alt": "The Socratic Method",
+        "type": "coverPoster",
+        "url": "/library/metadata/7701/thumb/1746651281"
+      },
+      {
+        "alt": "The Socratic Method",
+        "type": "snapshot",
+        "url": "/library/metadata/7712/thumb/1746781386"
+      },
+      {
+        "alt": "The Socratic Method",
+        "type": "background",
+        "url": "/library/metadata/7701/art/1746651281"
+      },
+      {
+        "alt": "The Socratic Method",
+        "type": "clearLogo",
+        "url": "/library/metadata/7701/clearLogo/1746651281"
+      }
+    ],
+    "UltraBlurColors": {
+      "topLeft": "292624",
+      "topRight": "6b3921",
+      "bottomRight": "2a2722",
+      "bottomLeft": "5b341a"
+    },
+    "Guid": [
+      {
+        "id": "imdb://tt0606045"
+      },
+      {
+        "id": "tmdb://63743"
+      },
+      {
+        "id": "tvdb://110999"
+      }
+    ],
+    "Rating": [
+      {
+        "image": "imdb://image.rating",
+        "value": 8.3,
+        "type": "audience"
+      },
+      {
+        "image": "themoviedb://image.rating",
+        "value": 7.8,
+        "type": "audience"
+      }
+    ],
+    "Director": [
+      {
+        "id": 49288,
+        "filter": "director=49288",
+        "tag": "Peter Medak",
+        "tagKey": "5d7768253c3c2a001fbcace8",
+        "thumb": "https://metadata-static.plex.tv/7/people/79d19869bfde6499803e86e3f018e308.jpg"
+      }
+    ],
+    "Writer": [
+      {
+        "id": 49289,
+        "filter": "writer=49289",
+        "tag": "John Mankiewicz",
+        "tagKey": "5d9c07f108fddd001f28e9e4",
+        "thumb": "https://metadata-static.plex.tv/9/people/9b385183ac7eebf20512552050d50482.jpg"
+      }
+    ],
+    "Role": [
+      {
+        "id": 49107,
+        "filter": "actor=49107",
+        "tag": "Hugh Laurie",
+        "tagKey": "5d776829103a2d001f564c5a",
+        "role": "Gregory House",
+        "thumb": "https://metadata-static.plex.tv/0/people/0ed174d86ee4823c05c3cb4e71b1367e.jpg"
+      },
+      {
+        "id": 49109,
+        "filter": "actor=49109",
+        "tag": "Lisa Edelstein",
+        "tagKey": "5d77682c8a7581001f12c814",
+        "role": "Lisa Cuddy",
+        "thumb": "https://metadata-static.plex.tv/c/people/cada4751147ae7a58d8530463db2c2f3.jpg"
+      },
+      {
+        "id": 46813,
+        "filter": "actor=46813",
+        "tag": "Robert Sean Leonard",
+        "tagKey": "5d7768267e9a3c0020c6aa0e",
+        "role": "James Wilson",
+        "thumb": "https://metadata-static.plex.tv/6/people/6ae10487848763988a98764ea97e5013.jpg"
+      },
+      {
+        "id": 28352,
+        "filter": "actor=28352",
+        "tag": "Omar Epps",
+        "tagKey": "5d776826999c64001ec2c2ed",
+        "role": "Eric Foreman",
+        "thumb": "https://metadata-static.plex.tv/0/people/0010bfd6330b05c5ad33daca7c4cee3e.jpg"
+      },
+      {
+        "id": 19541,
+        "filter": "actor=19541",
+        "tag": "Jennifer Morrison",
+        "tagKey": "5d776829e6d55c002040b341",
+        "role": "Allison Cameron",
+        "thumb": "https://metadata-static.plex.tv/b/people/bc32dc36764154e81b8510a4f7384d6d.jpg"
+      },
+      {
+        "id": 49108,
+        "filter": "actor=49108",
+        "tag": "Jesse Spencer",
+        "tagKey": "5d77683ca091de001f2e8cf6",
+        "role": "Robert Chase",
+        "thumb": "https://metadata-static.plex.tv/8/people/82e0a0445eeb5efc3dd5499822e76f83.jpg"
+      },
+      {
+        "id": 21984,
+        "filter": "actor=21984",
+        "tag": "Aaron Himelstein",
+        "tagKey": "5d77682661141d001fb1359b",
+        "role": "Luke Palermo",
+        "thumb": "https://metadata-static.plex.tv/0/people/0317a2feac2787b28f6409fecd27322c.jpg"
+      },
+      {
+        "id": 1065,
+        "filter": "actor=1065",
+        "tag": "Stacy Edwards",
+        "tagKey": "5d77682aeb5d26001f1de543",
+        "role": "Lucy Palermo",
+        "thumb": "https://metadata-static.plex.tv/people/5d77682aeb5d26001f1de543.jpg"
+      },
+      {
+        "id": 23980,
+        "filter": "actor=23980",
+        "tag": "John Prosky",
+        "tagKey": "5d7768273c3c2a001fbcb2ac",
+        "role": "Dr. Bergin",
+        "thumb": "https://metadata-static.plex.tv/2/people/27a82b2940816755f5f0a7875f5ea41f.jpg"
+      },
+      {
+        "id": 8040,
+        "filter": "actor=8040",
+        "tag": "Pat Musick",
+        "tagKey": "5d77682e961905001eb92c8a",
+        "role": "Trina Wyatt",
+        "thumb": "https://metadata-static.plex.tv/1/people/1199d6eafc75c95e570fe56b136cc39e.jpg"
+      },
+      {
+        "id": 17634,
+        "filter": "actor=17634",
+        "tag": "Sonya Eddy",
+        "tagKey": "5d7768353c3c2a001fbce553",
+        "role": "Sally",
+        "thumb": "https://metadata-static.plex.tv/3/people/3d6e6abfd2aa024c97f4489da4ba91c9.jpg"
+      },
+      {
+        "id": 49290,
+        "filter": "actor=49290",
+        "tag": "Lilas Lane",
+        "tagKey": "5d77683585719b001f3a3b18",
+        "role": "Terri"
+      },
+      {
+        "id": 31719,
+        "filter": "actor=31719",
+        "tag": "David Vegh",
+        "tagKey": "5d7768286f4521001ea9945e",
+        "role": "Clark"
+      },
+      {
+        "id": 49291,
+        "filter": "actor=49291",
+        "tag": "Veronica Leigh",
+        "tagKey": "5e162f59cd0850003b759380",
+        "role": "Wendy"
+      },
+      {
+        "id": 49140,
+        "filter": "actor=49140",
+        "tag": "Al Espinosa",
+        "tagKey": "5e164065cd0850003b769bd5",
+        "role": "Dr. Wells",
+        "thumb": "https://metadata-static.plex.tv/c/people/c780b1709860516bab33e2a233d6405a.jpg"
+      },
+      {
+        "id": 49292,
+        "filter": "actor=49292",
+        "tag": "Cisco X. Drayton",
+        "tagKey": "5f33a3b89fe6290041896ec9",
+        "role": "Truant Officer"
+      }
+    ],
+    "Producer": [
+      {
+        "id": 49225,
+        "filter": "producer=49225",
+        "tag": "Gerrit van der Meer",
+        "tagKey": "5d7768283c3c2a001fbcb693"
+      }
+    ]
+  }
+}
