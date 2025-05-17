@@ -1,6 +1,6 @@
 import {expect } from 'chai';
 
-import { PlexWebhookPayload } from '../models/model.js';
+import { PlexWebhookPayload } from '../src/models/model.js';
 import sampleWebhook from './sampleWebhook.json' with { type: 'json' };
 
 describe('PlexWebhookPayload Model', () => {

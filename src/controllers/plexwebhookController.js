@@ -1,3 +1,4 @@
+const {sendChannelNewContent} = require('../util/discordUtil.js')
 
 const webhookReceived = async(req, res) => {
    
@@ -6,7 +7,8 @@ const webhookReceived = async(req, res) => {
     
     //console.log(plexData)
     console.dir(plexData, {depth: null, colors: true}); //fully expanded nested data (deep objects) - this isn't expanded by default with console.log
-    //Respond with 200 
+    //Respond with 200
+    sendChannelNewContent(plexData) 
     res.send(200)
 }
 

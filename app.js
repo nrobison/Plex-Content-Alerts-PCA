@@ -5,7 +5,7 @@ const express = require("express")
 const app = express()
 
 //Routes
-const routes = require('./routes')
+const routes = require('./src/routes')
 app.use('/',routes)
 
 const PORT = 3000
