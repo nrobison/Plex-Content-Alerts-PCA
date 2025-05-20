@@ -10,7 +10,7 @@ const { blockQuote, bold, italic, quote, spoiler, strikethrough, underline, subt
 const sendChannelNewContent = (payload) => {
 	var event = new PlexWebhookPayload(payload)
 	const channel = discordClient.channels.cache.get(channel_id)
-	channel.send(bold(event.Metadata.title + " " + event.Metadata.year))
+	channel.send(bold(event.Metadata.title + " " + "(" + event.Metadata.year + ")"))
 	channel.send(underline("Rating: " + event.Metadata.audienceRating))	
 
 }
