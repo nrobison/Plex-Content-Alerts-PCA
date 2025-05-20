@@ -83,7 +83,7 @@ class UltraBlurColorsModel {
 }
 
 //Objects from webhook, should map them to their respective classes
-//map functions to convert the data to the respective classes, should loop over each item in  the aray, apply the func, and return a new array of results
+//map functions to convert the data to the respective classes, should loop over each item in  the array, apply the func, and return a new array of results
 //.. hopefully
 
 class MetadataModel { 
