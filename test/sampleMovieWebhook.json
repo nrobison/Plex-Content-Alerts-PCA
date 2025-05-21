@@ -1,0 +1,607 @@
+{
+   "event":"media.stop",
+   "user":true,
+   "owner":true,
+   "Account":{
+      "id":948245192,
+      "thumb":"https://plex.tv/users/723036p032a1f0581/avatar?c=1790572931",
+      "title":"pancakeOCEAN"
+   },
+   "Server":{
+      "title":"OceanPlex",
+      "uuid":"4gt6245524f9a72472xdf6c67a434e2183c47c61"
+   },
+   "Player":{
+      "local":true,
+      "publicAddress":"53.92.187.23",
+      "title":"Waffle",
+      "uuid":"4d5dct74ljkhw3odkwvby3x3"
+   },
+   "Metadata":{
+      "librarySectionType":"movie",
+      "ratingKey":"9332",
+      "key":"/library/metadata/9332",
+      "guid":"plex://movie/5d777084fb0d55001f5f2326",
+      "slug":"gran-turismo",
+      "studio":"PlayStation Productions",
+      "type":"movie",
+      "title":"Gran Turismo",
+      "librarySectionTitle":"Movies",
+      "librarySectionID":1,
+      "librarySectionKey":"/library/sections/1",
+      "contentRating":"PG-13",
+      "summary":"Based on the unbelievable, inspiring true story of a team of underdogs - a struggling, working-class gamer, a failed former race car driver, and an idealistic motorsport exec - who risk it all to take on the most elite sport in the world.",
+      "rating":6.5,
+      "audienceRating":9.8,
+      "year":2023,
+      "tagline":"From gamer to racer.",
+      "thumb":"/library/metadata/9332/thumb/1747645478",
+      "art":"/library/metadata/9332/art/1747645478",
+      "duration":8100000,
+      "originallyAvailableAt":"2023-08-09",
+      "addedAt":1747619969,
+      "updatedAt":1747645478,
+      "audienceRatingImage":"rottentomatoes://image.rating.upright",
+      "chapterSource":"media",
+      "primaryExtraKey":"/library/metadata/9333",
+      "ratingImage":"rottentomatoes://image.rating.ripe",
+      "Image":[
+         {
+            "alt":"Gran Turismo",
+            "type":"coverPoster",
+            "url":"/library/metadata/9332/thumb/1747645478"
+         },
+         {
+            "alt":"Gran Turismo",
+            "type":"background",
+            "url":"/library/metadata/9332/art/1747645478"
+         },
+         {
+            "alt":"Gran Turismo",
+            "type":"clearLogo",
+            "url":"/library/metadata/9332/clearLogo/1747645478"
+         }
+      ],
+      "UltraBlurColors":{
+         "topLeft":"3e230e",
+         "topRight":"170303",
+         "bottomRight":"91441e",
+         "bottomLeft":"7c301c"
+      },
+      "Genre":[
+         {
+            "id":6,
+            "filter":"genre=6",
+            "tag":"Action",
+            "count":249
+         },
+         {
+            "id":410,
+            "filter":"genre=410",
+            "tag":"Adventure",
+            "count":180
+         },
+         {
+            "id":205,
+            "filter":"genre=205",
+            "tag":"Drama",
+            "count":260
+         },
+         {
+            "id":546,
+            "filter":"genre=546",
+            "tag":"Sport",
+            "count":18
+         }
+      ],
+      "Country":[
+         {
+            "id":70,
+            "filter":"country=70",
+            "tag":"United States of America",
+            "count":565
+         }
+      ],
+      "Guid":[
+         {
+            "id":"imdb://tt4495098"
+         },
+         {
+            "id":"tmdb://980489"
+         },
+         {
+            "id":"tvdb://338063"
+         }
+      ],
+      "Rating":[
+         {
+            "image":"imdb://image.rating",
+            "value":7.1,
+            "type":"audience",
+            "count":590
+         },
+         {
+            "image":"rottentomatoes://image.rating.ripe",
+            "value":6.5,
+            "type":"critic",
+            "count":330
+         },
+         {
+            "image":"rottentomatoes://image.rating.upright",
+            "value":9.8,
+            "type":"audience",
+            "count":408
+         },
+         {
+            "image":"themoviedb://image.rating",
+            "value":7.8,
+            "type":"audience",
+            "count":590
+         }
+      ],
+      "Director":[
+         {
+            "id":56077,
+            "filter":"director=56077",
+            "tag":"Neill Blomkamp",
+            "tagKey":"5d776841e6d55c002040eeef",
+            "thumb":"https://metadata-static.plex.tv/6/people/65dbd219dbb42b5fe6bdb32b943ac82a.jpg"
+         }
+      ],
+      "Writer":[
+         {
+            "id":56078,
+            "filter":"writer=56078",
+            "tag":"Jason Hall",
+            "tagKey":"5d7768587228e5001f1e2afc",
+            "thumb":"https://metadata-static.plex.tv/0/people/03fed249488f329f09ac479889e03400.jpg"
+         },
+         {
+            "id":56079,
+            "filter":"writer=56079",
+            "tag":"Zach Baylin",
+            "tagKey":"5dd8743fa02a52001d6de597",
+            "thumb":"https://metadata-static.plex.tv/c/people/c249337754a68158d290bdcce3f4ff1a.jpg"
+         }
+      ],
+      "Role":[
+         {
+            "id":56080,
+            "filter":"actor=56080",
+            "tag":"Archie Madekwe",
+            "tagKey":"5d776cb17a53e9001e74a97f",
+            "role":"Jann Mardenborough",
+            "thumb":"https://metadata-static.plex.tv/a/people/a553e0c099ef792c872660a51df85014.jpg"
+         },
+         {
+            "id":40407,
+            "filter":"actor=40407",
+            "tag":"David Harbour",
+            "tagKey":"5d776825eb5d26001f1dd12b",
+            "role":"Jack Salter",
+            "thumb":"https://metadata-static.plex.tv/1/people/15be206a0a7b621f4aa98f941f9db239.jpg"
+         },
+         {
+            "id":9150,
+            "filter":"actor=9150",
+            "tag":"Orlando Bloom",
+            "tagKey":"5d776825999c64001ec2bfec",
+            "count":2,
+            "role":"Danny Moore",
+            "thumb":"https://metadata-static.plex.tv/8/people/82d47e1df40dc48df18af940f16f1169.jpg"
+         },
+         {
+            "id":14623,
+            "filter":"actor=14623",
+            "tag":"Djimon Hounsou",
+            "tagKey":"5d7768267228e5001f1dcdb9",
+            "count":4,
+            "role":"Steve Mardenborough",
+            "thumb":"https://metadata-static.plex.tv/8/people/8730541ac598153cc649a566c8045fbd.jpg"
+         },
+         {
+            "id":56081,
+            "filter":"actor=56081",
+            "tag":"Darren Barnet",
+            "tagKey":"5d77709031d95e001f1a48ef",
+            "role":"Matty Davis",
+            "thumb":"https://metadata-static.plex.tv/a/cc68393fae/people/a23a165208d6de9551f2165eb0a68ffe.jpg"
+         },
+         {
+            "id":56082,
+            "filter":"actor=56082",
+            "tag":"Maeve Courtier-Lilley",
+            "tagKey":"60bdd403b72c8c002ddec4da",
+            "role":"Audrey",
+            "thumb":"https://metadata-static.plex.tv/c/people/c494a51e59ee2f89ee7870863d5b482f.jpg"
+         },
+         {
+            "id":17159,
+            "filter":"actor=17159",
+            "tag":"Geri Halliwell",
+            "tagKey":"5d776830961905001eb92fb0",
+            "count":2,
+            "role":"Lesley Mardenborough",
+            "thumb":"https://metadata-static.plex.tv/8/people/8ee5c9d7571912f735237709250c247c.jpg"
+         },
+         {
+            "id":56083,
+            "filter":"actor=56083",
+            "tag":"Daniel Puig",
+            "tagKey":"5f3fc3e3ce2564003f854fa0",
+            "role":"Coby Mardenborough",
+            "thumb":"https://metadata-static.plex.tv/4/people/49a513a72902e4868268181fb753824e.jpg"
+         },
+         {
+            "id":56084,
+            "filter":"actor=56084",
+            "tag":"Josha Stradowski",
+            "tagKey":"5ec415893b12ac0041faa6c5",
+            "role":"Nicholas Capa",
+            "thumb":"https://metadata-static.plex.tv/a/people/acd4ac941d076878ce502b5ab6dd39ae.jpg"
+         },
+         {
+            "id":1359,
+            "filter":"actor=1359",
+            "tag":"Thomas Kretschmann",
+            "tagKey":"5d776826eb5d26001f1dd4ec",
+            "count":6,
+            "role":"Patrice Capa",
+            "thumb":"https://metadata-static.plex.tv/a/people/ad553532dc563b368b9ac5255add8472.jpg"
+         },
+         {
+            "id":56085,
+            "filter":"actor=56085",
+            "tag":"Emelia Hartford",
+            "tagKey":"5d776afd7a53e9001e7160a9",
+            "role":"Leah Vega",
+            "thumb":"https://metadata-static.plex.tv/a/people/a0de6858067ff23194c224fe566771a1.jpg"
+         },
+         {
+            "id":56086,
+            "filter":"actor=56086",
+            "tag":"Pepe Barroso",
+            "tagKey":"5f3fc75152f200004148dcc4",
+            "role":"Antonio Cruz",
+            "thumb":"https://metadata-static.plex.tv/f/people/fac779e96a6f8562ee73c87559305652.jpg"
+         },
+         {
+            "id":56087,
+            "filter":"actor=56087",
+            "tag":"Sang Heon Lee",
+            "tagKey":"62bc6b76a048df317fb4c2b4",
+            "role":"Joo-Hwan Lee",
+            "thumb":"https://metadata-static.plex.tv/2/people/27a65df11ae2d5e2d5b0fcbbf1be76bc.jpg"
+         },
+         {
+            "id":56088,
+            "filter":"actor=56088",
+            "tag":"Maximilian Mundt",
+            "tagKey":"5f402cbb02101b0040f5980a",
+            "role":"Klaus Hoffman",
+            "thumb":"https://metadata-static.plex.tv/7/people/7b544c5bcc85bc2d2f29aadbd02270ab.jpg"
+         },
+         {
+            "id":56089,
+            "filter":"actor=56089",
+            "tag":"Mariano González",
+            "tagKey":"675200af56be7b2f9757cc9c",
+            "role":"Henry Evas",
+            "thumb":"https://metadata-static.plex.tv/2/people/208da9b71d1bf1edd45210a4b5ca757a.jpg"
+         },
+         {
+            "id":56090,
+            "filter":"actor=56090",
+            "tag":"Lindsay Pattison",
+            "tagKey":"5f406a1e5a76a80042de23fc",
+            "role":"Chloe McCormick",
+            "thumb":"https://metadata-static.plex.tv/7/people/75ee69935f5120c73de1974a0e023686.jpg"
+         },
+         {
+            "id":56091,
+            "filter":"actor=56091",
+            "tag":"Théo Christine",
+            "tagKey":"5d776d4df617c90020187f99",
+            "role":"Marcel Durand",
+            "thumb":"https://metadata-static.plex.tv/0/people/09787763271b22666e7c222d198bc547.jpg"
+         },
+         {
+            "id":56092,
+            "filter":"actor=56092",
+            "tag":"Nikhil Parmar",
+            "tagKey":"5ec421b543d47400431fbbc7",
+            "role":"Persol",
+            "thumb":"https://metadata-static.plex.tv/0/people/04d45563076257b253b5799875e36090.jpg"
+         },
+         {
+            "id":10259,
+            "filter":"actor=10259",
+            "tag":"Richard Cambridge",
+            "tagKey":"5d776857594b2b001e6891c0",
+            "role":"Felix",
+            "thumb":"https://metadata-static.plex.tv/7/people/765ab8699a70bf47c366d8d1a2b10371.jpg"
+         },
+         {
+            "id":56093,
+            "filter":"actor=56093",
+            "tag":"Takehiro Hira",
+            "tagKey":"5d77688fad5437001f749762",
+            "role":"Kazunori Yamauchi",
+            "thumb":"https://metadata-static.plex.tv/e/people/e082e2960ac23a7bd27fe9a053a01653.jpg"
+         },
+         {
+            "id":56094,
+            "filter":"actor=56094",
+            "tag":"Niall McShea",
+            "tagKey":"62a0b15388ba80d9f537a4d4",
+            "role":"Fredrick Schulin"
+         },
+         {
+            "id":23163,
+            "filter":"actor=23163",
+            "tag":"Akie Kotabe",
+            "tagKey":"5d776874eb5d26001f1ec1ac",
+            "role":"Akira Akiba",
+            "thumb":"https://metadata-static.plex.tv/0/people/07c2c346542d205b368b3b85f8aa8146.jpg"
+         },
+         {
+            "id":56095,
+            "filter":"actor=56095",
+            "tag":"Sadao Ueda",
+            "tagKey":"5d7768325af944001f1f9168",
+            "role":"Skeptical Nissan Board Member",
+            "thumb":"https://metadata-static.plex.tv/4/people/4675c17a5186a32d32d2439fd7248fd7.jpg"
+         },
+         {
+            "id":56096,
+            "filter":"actor=56096",
+            "tag":"Wai Wong",
+            "tagKey":"64d62352b89bec823cd34f67",
+            "role":"Senior Nissan Executive"
+         },
+         {
+            "id":50970,
+            "filter":"actor=50970",
+            "tag":"Jamie Kenna",
+            "tagKey":"5d7768334de0ee001fccb1ab",
+            "count":2,
+            "role":"Jack Man Jones",
+            "thumb":"https://metadata-static.plex.tv/0/people/08b03272cc9d463ab493dafea6a8963e.jpg"
+         },
+         {
+            "id":51871,
+            "filter":"actor=51871",
+            "tag":"Royce Cronin",
+            "tagKey":"5d776d2447dd6e001f6f079b",
+            "count":2,
+            "role":"Capa Team Leader"
+         },
+         {
+            "id":56097,
+            "filter":"actor=56097",
+            "tag":"Harki Bhambra",
+            "tagKey":"5d77708b31d95e001f1a3fcf",
+            "role":"Avi Bhatt",
+            "thumb":"https://metadata-static.plex.tv/3/people/3a2af6259c7a2b148f0c9dabcfe7fa01.jpg"
+         },
+         {
+            "id":56098,
+            "filter":"actor=56098",
+            "tag":"Joanne Heywood",
+            "tagKey":"5d9c0801e264b7001fc39b24",
+            "role":"Clothing Customer"
+         },
+         {
+            "id":56099,
+            "filter":"actor=56099",
+            "tag":"Cavan Jones",
+            "tagKey":"64d623521d8acd270bead815",
+            "role":"Kid Playing at Gamer Cafe"
+         },
+         {
+            "id":56100,
+            "filter":"actor=56100",
+            "tag":"Lloyd Meredith",
+            "tagKey":"60b9059bb6a3c2002cb5dfb8",
+            "role":"Percy",
+            "thumb":"https://metadata-static.plex.tv/e/people/e886391d190ccef2a7ebb9460282cc46.jpg"
+         },
+         {
+            "id":56101,
+            "filter":"actor=56101",
+            "tag":"Hannah Hornsby",
+            "tagKey":"64d62351bb74ae6357b2dc74",
+            "role":"Audrey's Friend"
+         },
+         {
+            "id":56102,
+            "filter":"actor=56102",
+            "tag":"Bence Bauer",
+            "tagKey":"5f405302bf3e560040bfe594",
+            "role":"Bonfire Guy"
+         },
+         {
+            "id":56103,
+            "filter":"actor=56103",
+            "tag":"Ciaran Joyce",
+            "tagKey":"5d77684e880197001ec97e74",
+            "role":"Ciaran Cochrane",
+            "thumb":"https://metadata-static.plex.tv/people/5d77684e880197001ec97e74.jpg"
+         },
+         {
+            "id":56104,
+            "filter":"actor=56104",
+            "tag":"John Carter",
+            "tagKey":"64d62352b89bec823cd34ef5",
+            "role":"James Wallace"
+         },
+         {
+            "id":56105,
+            "filter":"actor=56105",
+            "tag":"Niki Faulkner",
+            "tagKey":"5e16539046aceb003ceee54c",
+            "role":"Instructor"
+         },
+         {
+            "id":56106,
+            "filter":"actor=56106",
+            "tag":"Rina Saito",
+            "tagKey":"5d7768af308bca002032fd35",
+            "role":"Kaz's Translator",
+            "thumb":"https://metadata-static.plex.tv/a/people/a40919a13f78428a45ae72aa02ac4739.jpg"
+         },
+         {
+            "id":56107,
+            "filter":"actor=56107",
+            "tag":"Peter Lundie",
+            "tagKey":"64d6235115d25da87fccdaf0",
+            "role":"Race Coordinator GT Academy"
+         },
+         {
+            "id":56108,
+            "filter":"actor=56108",
+            "tag":"Andrea Vasiliou",
+            "tagKey":"5d776d7723d5a3001f523784",
+            "role":"Dubai Racing Fan",
+            "thumb":"https://metadata-static.plex.tv/4/people/4633e11cfe0370127ac0200cf33c9854.jpg"
+         },
+         {
+            "id":56109,
+            "filter":"actor=56109",
+            "tag":"Yoojin Lee",
+            "tagKey":"640d9ad3d7d42a0690841275",
+            "role":"Dubai Racing Fan",
+            "thumb":"https://metadata-static.plex.tv/7/people/73c5c5d4492e035faead5b787dcce546.jpg"
+         },
+         {
+            "id":56110,
+            "filter":"actor=56110",
+            "tag":"Matthew Hirsch",
+            "tagKey":"5dce74c94288ee001eb656b1",
+            "role":"Race Marshall (Le Mans)"
+         },
+         {
+            "id":56111,
+            "filter":"actor=56111",
+            "tag":"Jacques Jouffret",
+            "tagKey":"5e16343c91c203004120e6c4",
+            "role":"Race Official (Le Mans)",
+            "thumb":"https://metadata-static.plex.tv/d/people/d14546d6ef59996ca47dbbb5b7766b71.jpg"
+         },
+         {
+            "id":56112,
+            "filter":"actor=56112",
+            "tag":"Eszter Zavaros",
+            "tagKey":"64d62351504f8d889693e7f6",
+            "role":"Female Chef"
+         },
+         {
+            "id":56113,
+            "filter":"actor=56113",
+            "tag":"Daijiro Yoshihara",
+            "tagKey":"5e16258720b9e6003e34237a",
+            "role":"Nissan Corporate Driver (Japan)",
+            "thumb":"https://metadata-static.plex.tv/people/5e16258720b9e6003e34237a.jpg"
+         },
+         {
+            "id":56114,
+            "filter":"actor=56114",
+            "tag":"Maya Murofushi",
+            "tagKey":"5d776a9d96b655001fdf4026",
+            "role":"Nissan Desk Clerk",
+            "thumb":"https://metadata-static.plex.tv/4/people/4bc47605d729a6cdaae60fd825a80dc2.jpg"
+         },
+         {
+            "id":56115,
+            "filter":"actor=56115",
+            "tag":"Bianca Bardoe",
+            "tagKey":"5f3fd011768fc70040515b8d",
+            "role":"Germany Reporter",
+            "thumb":"https://metadata-static.plex.tv/c/people/c2b93876bc0f38ea322d8ac2400f2ec2.jpg"
+         },
+         {
+            "id":56116,
+            "filter":"actor=56116",
+            "tag":"Selin Cuhadaroglu",
+            "tagKey":"5ff07aac7b2256002d194be8",
+            "role":"Sarah Eaton"
+         },
+         {
+            "id":56117,
+            "filter":"actor=56117",
+            "tag":"Hadia Tarek Mohamed Elsayed Sadek Ghaleb",
+            "tagKey":"64d6235203b8ca6d891ac60a",
+            "role":"Dubai Reporter"
+         },
+         {
+            "id":56118,
+            "filter":"actor=56118",
+            "tag":"Kal Sabir",
+            "tagKey":"5d776d2cf617c900201870d3",
+            "role":"Dubai Reporter",
+            "thumb":"https://metadata-static.plex.tv/f/people/f278f0944b4f229d9f52278d792e5a6c.jpg"
+         },
+         {
+            "id":56119,
+            "filter":"actor=56119",
+            "tag":"Ayano Yamamoto",
+            "tagKey":"5f3fca6b52f200004149245d",
+            "role":"Nissan Executive Translator",
+            "thumb":"https://image.tmdb.org/t/p/original/f1eYV3oWGTlGv2lB1ztS6iOQZr8.jpg"
+         },
+         {
+            "id":56120,
+            "filter":"actor=56120",
+            "tag":"Will Buxton",
+            "tagKey":"5f40322d5a76a80042d6cbad",
+            "role":"Race Commentator",
+            "thumb":"https://metadata-static.plex.tv/8/people/8d1f354ffbbb9a800c46409861b79493.jpg"
+         },
+         {
+            "id":56121,
+            "filter":"actor=56121",
+            "tag":"Atsushi Kuwayama",
+            "tagKey":"5d776f3296b655001fe80003",
+            "role":"Polyphony Employee, Japan"
+         },
+         {
+            "id":56122,
+            "filter":"actor=56122",
+            "tag":"Kazunori Yamauchi",
+            "tagKey":"5d776a9696b655001fdf3370",
+            "role":"Sushi Chef (uncredited)",
+            "thumb":"https://metadata-static.plex.tv/3/people/3397eea728a101377789702505683ea1.jpg"
+         }
+      ],
+      "Producer":[
+         {
+            "id":56123,
+            "filter":"producer=56123",
+            "tag":"Asad Qizilbash",
+            "tagKey":"5f3ff73a58b26e00425e2b55",
+            "thumb":"https://metadata-static.plex.tv/e/people/ecc2389248679f0f303f0883236d975c.jpg"
+         },
+         {
+            "id":56124,
+            "filter":"producer=56124",
+            "tag":"Carter Swan",
+            "tagKey":"5d776962fb0d55001f5249fc"
+         },
+         {
+            "id":56125,
+            "filter":"producer=56125",
+            "tag":"Doug Belgrad",
+            "tagKey":"5d776d4f594b2b001e706094",
+            "thumb":"https://metadata-static.plex.tv/9/people/9c3cfd7274251e8de1a409cef00030e5.jpg"
+         },
+         {
+            "id":45828,
+            "filter":"producer=45828",
+            "tag":"Dana Brunetti",
+            "tagKey":"5d77683df54112001f5be8e5",
+            "count":2,
+            "thumb":"https://metadata-static.plex.tv/2/people/21abd41448f41f21773072d5a20256dd.jpg"
+         }
+      ]
+   }
+}
