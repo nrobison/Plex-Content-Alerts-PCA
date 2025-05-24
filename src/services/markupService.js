@@ -1,22 +1,4 @@
-
-const {PlexWebhookPayload} = require("../models/plexModels.js") 
-const {guild_id, channel_id, markup} = require("../config.json")
-const { blockQuote, bold, italic, quote, spoiler, strikethrough, underline, subtext } = require('discord.js');
-
-//title + YEAR is BOLD
-//Genre is italics
-//Rating is underlined
-
-const sendChannelNewContent = (payload) => {
-	var event = new PlexWebhookPayload(payload)
-	const channel = discordClient.channels.cache.get(channel_id)
-	channel.send(displayTitleYearString(event.Metadata.title, event.Metadata.year) + " " +
-			(displayGenresString(event.Metadata.Genre)) + "\n" + 
-			(displayRatingsString(event.Metadata.Rating)) + "\n" + 
-			(displaySummaryString(event.Metadata.summary))
-)
-
-}
+const {blockQuote, bold, italic, underline} = require('discord.js')
 
 function displayTitleYearString(title, year){
 	return bold(title + " " + "(" + year + ")")
@@ -59,7 +41,10 @@ function displayGenresString(genre) {
 	return italic(genresString);
 }
 
-
 module.exports = {
-	sendChannelNewContent
+    displayGenresString,
+    displayRatingsString,
+    capitolFirstLetter,
+    displaySummaryString,
+    displayTitleYearString
 }

@@ -1,4 +1,4 @@
-const {sendChannelNewContent} = require('../util/discordUtil.js')
+const {sendChannelNewContent} = require('../services/discordMessageService.js')
 
 const webhookReceived = async(req, res) => {
    
