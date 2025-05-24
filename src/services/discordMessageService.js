@@ -1,6 +1,6 @@
 
 const {PlexWebhookPayload} = require("../models/plexModels.js") 
-const {guild_id, channel_id, markup} = require("../config.json")
+const {guild_id, channel_id,show_genres, show_scores} = require("../config.json")
 const {displayTitleYearString, displayRatingsString, displayGenresString, displaySummaryString} = require("./markupService.js")
 
 //title + YEAR is BOLD
@@ -10,11 +10,16 @@ const {displayTitleYearString, displayRatingsString, displayGenresString, displa
 const sendChannelNewContent = (payload) => {
 	var event = new PlexWebhookPayload(payload)
 	const channel = discordClient.channels.cache.get(channel_id)
-	channel.send(displayTitleYearString(event.Metadata.title, event.Metadata.year) + " " +
-			(displayGenresString(event.Metadata.Genre)) + "\n" + 
-			(displayRatingsString(event.Metadata.Rating)) + "\n" + 
-			(displaySummaryString(event.Metadata.summary))
-	)
+	var messageToSend = ""
+	messageToSend += displayTitleYearString(event.Metadata.title, event.Metadata.year) + " "
+	if(show_genres){
+		messageToSend += displayGenresString(event.Metadata.Genre) + "\n"
+	}
+	if(show_scores){
+		messageToSend += displayRatingsString(event.Metadata.Rating) + "\n"
+	}
+	messageToSend += displaySummaryString(event.Metadata.summary)
+	channel.send(messageToSend)
 }
 
 

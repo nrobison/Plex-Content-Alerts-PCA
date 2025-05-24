@@ -1,4 +1,5 @@
 const {blockQuote, bold, italic, underline} = require('discord.js')
+const {show_audience_scores, show_critic_scores, critic_sources} = require('../config.json')
 
 function displayTitleYearString(title, year){
 	return bold(title + " " + "(" + year + ")")
@@ -15,11 +16,23 @@ function capitolFirstLetter(Rating){
 }
 
 function displayRatingsString(Rating){ //CAP "R" for Rating
-	var ratingsString = " " 
+	var ratingsString = " "
+    
+    var sourcesWanted =  critic_sources.map(item => {
+        if(item == "tmdb"){
+            return "themoviedb"
+        }
+        else{
+            return item.replace(/\s/g, '')
+        }
+    })
+    
 	Rating.forEach(Rating => {
-			const ratingsSource = Rating.image.match(/^([a-z]+):\/\//i)?.[1]; 
-		ratingsString += "• " + ratingsSource + ": " + Rating.value + " " +
-		 "(" + capitolFirstLetter(Rating) + ")" +" "
+		var ratingsSource = Rating.image.match(/^([a-z]+):\/\//i)?.[1]; 
+        if(sourcesWanted.includes(ratingsSource) && ((show_audience_scores && Rating.type == "audience") || (show_critic_scores && Rating.type == "critic"))){
+		    ratingsString += "• " + ratingsSource + ": " + Rating.value + " " +
+		    "(" + capitolFirstLetter(Rating) + ")" +" "
+        }
 	});
 
 	return underline(ratingsString) 
