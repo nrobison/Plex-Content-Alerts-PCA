@@ -35,10 +35,16 @@ function capitolFirstLetter(Rating){
 }
 
 function displayRatingsString(Rating){ //CAP "R" for Rating
+	const sourceImageDisplayNames = {
+	"imdb": "IMDB",
+	"rottentomatoes": "Rotten Tomatoes",
+	"themoviedb": "The Movie DB",
+	};
 	var ratingsString = " " 
 	Rating.forEach(Rating => {
 			const ratingsSource = Rating.image.match(/^([a-z]+):\/\//i)?.[1]; 
-		ratingsString += ratingsSource + ": " + Rating.value + " " +
+			const properSourceName = sourceImageDisplayNames[ratingsSource] || ratingsSource;
+		ratingsString += properSourceName + ": " + Rating.value + " " +
 		 "(" + capitolFirstLetter(Rating) + ")" +" "
 	});
 

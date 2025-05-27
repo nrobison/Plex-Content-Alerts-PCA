@@ -2,12 +2,13 @@ const {blockQuote, bold, italic, underline} = require('discord.js')
 const {show_audience_scores, show_critic_scores, critic_sources} = require('../config.json')
 
 function displayTitleYearString(title, year){
-	return bold(title + " " + "(" + year + ")")
+	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " " + "\:projector:" + " "//Bold title and year)
 
 }
 
 function displaySummaryString(summary){
-	return blockQuote(summary) 
+	//return "\>\>\>" + " " + summary //Block quote style summary 
+	return "\`\`\`" + summary + "\`\`\`" //Code block style summary
 }
 
 
@@ -16,6 +17,11 @@ function capitolFirstLetter(Rating){
 }
 
 function displayRatingsString(Rating){ //CAP "R" for Rating
+	const sourceImageDisplayNames = {
+	"imdb": "IMDB",
+	"rottentomatoes": "Rotten Tomatoes",
+	"themoviedb": "The Movie DB",
+	};
 	var ratingsString = " "
     
     var sourcesWanted =  critic_sources.map(item => {
@@ -29,18 +35,20 @@ function displayRatingsString(Rating){ //CAP "R" for Rating
     
 	Rating.forEach(Rating => {
 		var ratingsSource = Rating.image.match(/^([a-z]+):\/\//i)?.[1]; 
+		const properSourceName = sourceImageDisplayNames[ratingsSource] || ratingsSource;
+
         if(sourcesWanted.includes(ratingsSource) && ((show_audience_scores && Rating.type == "audience") || (show_critic_scores && Rating.type == "critic"))){
-		    ratingsString += "• " + ratingsSource + ": " + Rating.value + " " +
+		    ratingsString += properSourceName + ": " + Rating.value + " " +
 		    "(" + capitolFirstLetter(Rating) + ")" +" "
         }
 	});
 
-	return underline(ratingsString) 
+	return "•" + "\_\_" + ratingsString + "\_\_" //Underlined rating
 }
 
 function displayGenresString(genre) {
 	if (!Array.isArray(genre) || genre.length === 0) {
-		return italic("Genre not provided");
+		return "\*" + "n/a" + "\*"; // Italics genre not provided
 	}
 
 	// Sort by Genre.count descending and then take the top 2
@@ -51,7 +59,7 @@ function displayGenresString(genre) {
 	// Build string of just the tags
 	let genresString = top2Genres.map(g => g.tag).join("/");
 
-	return italic(genresString);
+	return "\*" + genresString + "\*"; // Italics genre
 }
 
 module.exports = {
