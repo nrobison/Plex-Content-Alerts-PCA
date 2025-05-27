@@ -1,9 +1,17 @@
 const {blockQuote, bold, italic, underline} = require('discord.js')
 const {show_audience_scores, show_critic_scores, critic_sources} = require('../config.json')
+const { MetadataModel } = require('../models/plexModels')
 
 function displayTitleYearString(title, year){
-	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " " + "\:projector:" + " "//Bold title and year)
+	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " " + "\:projector:" + " "  //Bold title and year)
 
+}
+
+function displayNewContentString(type){
+	if (type == "movie"){
+	return "\# " + "New Content Added: " + capitolFirstContent(type) +   "\:projector:"}
+	else if (type == "episode"){
+	return "\# " + "New Content Added: " + capitolFirstContent(type) + "\:tv:"}
 }
 
 function displaySummaryString(summary){
@@ -14,6 +22,10 @@ function displaySummaryString(summary){
 
 function capitolFirstLetter(Rating){
 	return capitalizedRating = Rating.type.charAt(0).toUpperCase() + Rating.type.slice(1) //Capitalize the first letter of the rating type
+}
+
+function capitolFirstContent(type){
+	return capitalizedContent = type.charAt(0).toUpperCase() + type.slice(1) //Capitalize the first letter of the content type
 }
 
 function displayRatingsString(Rating){ //CAP "R" for Rating
@@ -67,5 +79,6 @@ module.exports = {
     displayRatingsString,
     capitolFirstLetter,
     displaySummaryString,
-    displayTitleYearString
+    displayTitleYearString,
+	displayNewContentString
 }
