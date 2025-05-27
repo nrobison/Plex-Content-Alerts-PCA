@@ -3,19 +3,18 @@ const {show_audience_scores, show_critic_scores, critic_sources} = require('../c
 const { MetadataModel } = require('../models/plexModels')
 
 function displayTitleYearString(title, year){
-	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " " + "\:projector:" + " "  //Bold title and year)
+	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " "  //Bold title and year)
 
 }
 
 function displayNewContentString(type){
 	if (type == "movie"){
-	return "\# " + "New Content Added: " + capitolFirstContent(type) +   "\:projector:"}
+	return "\# " + "New Content Added: " + "\:projector:"}
 	else if (type == "episode"){
-	return "\# " + "New Content Added: " + capitolFirstContent(type) + "\:tv:"}
+	return "\# " + "New Content Added: " + "\:tv:"}
 }
 
 function displaySummaryString(summary){
-	//return "\>\>\>" + " " + summary //Block quote style summary 
 	return "\`\`\`" + summary + "\`\`\`" //Code block style summary
 }
 
