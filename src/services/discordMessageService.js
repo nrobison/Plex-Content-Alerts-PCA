@@ -7,8 +7,7 @@ const {displayTitleYearString, displayRatingsString, displayGenresString, displa
 //Genre is italics
 //Rating is underlined
 
-const sendChannelNewContent = (payload) => {
-	var event = new PlexWebhookPayload(payload)
+const sendChannelNewContent = (event) => {
 	const channel = discordClient.channels.cache.get(channel_id)
 	var messageToSend = ""
 	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.title, event.Metadata.year) + " "
@@ -22,7 +21,15 @@ const sendChannelNewContent = (payload) => {
 	channel.send(messageToSend)
 }
 
+const processNewWebhookMessage = (payload) =>{
+	var event = new PlexWebhookPayload(payload)
+	//Temporary solution to prevent spamming episodes
+	if(event.event == "library.new" && event.Metadata.type != "episode" ){
+		sendChannelNewContent(event)
+		return
+	}
+}
 
 module.exports = {
-	sendChannelNewContent
+	processNewWebhookMessage
 }
