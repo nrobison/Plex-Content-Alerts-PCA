@@ -24,8 +24,9 @@ const sendChannelNewContent = (event) => {
 
 const processNewWebhookMessage = (payload) =>{
 	var event = new PlexWebhookPayload(payload)
+	console.log(event)
 	//Temporary solution to prevent spamming episodes
-	if(event.event == "library.new" && event.Metadata.type != "episode" ){
+	if(event.event == "library.new" && event.Metadata.type != "episode" & event.Metadata.type != "show" ){
 		sendChannelNewContent(event)
 		return
 	}

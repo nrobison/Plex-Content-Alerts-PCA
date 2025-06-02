@@ -35,7 +35,7 @@ class ServerModel {
 
 
 class PlayerModel {
-  constructor({ local, publicAddress, title, uuid }) {
+  constructor({ local = "", publicAddress ="", title="", uuid="" }) {
     this.local = local;
     this.publicAddress = publicAddress;
     this.title = title;
@@ -103,7 +103,7 @@ class MetadataModel {
 
 
 class PlexWebhookPayload {
-  constructor({ event, user, owner, Account, Server, Player, Metadata }) {
+  constructor({ event, user, owner, Account, Server, Player = PlayerModel, Metadata }) {
     this.event = event;
     this.user = user;
     this.owner = owner;
