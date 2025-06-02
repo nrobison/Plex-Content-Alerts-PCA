@@ -1,7 +1,7 @@
 
 const {PlexWebhookPayload} = require("../models/plexModels.js") 
 const {guild_id, channel_id,show_genres, show_scores} = require("../config.json")
-const {displayTitleYearString, displayRatingsString, displayGenresString, displaySummaryString, displayNewContentString} = require("./markupService.js")
+const {displayTitleYearString, displayRatingsString, displayGenresString, displaySummaryString, displayNewContentString, displayTopTwoRatings} = require("./markupService.js")
 
 //title + YEAR is BOLD
 //Genre is italics
@@ -16,7 +16,8 @@ const sendChannelNewContent = (payload) => {
 		messageToSend += displayGenresString(event.Metadata.Genre) + "\n"
 	}
 	if(show_scores){
-		messageToSend += displayRatingsString(event.Metadata.Rating) + "\n"
+		messageToSend += displayRatingsString(event.Metadata.Rating, event.Metadata) + "\n"
+		//messageToSend += displayTopTwoRatings(event.Metadata.Rating) + "\n"
 	}
 	messageToSend += displaySummaryString(event.Metadata.summary)
 	channel.send(messageToSend)

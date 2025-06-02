@@ -1,5 +1,5 @@
 const {blockQuote, bold, italic, underline} = require('discord.js')
-const {show_audience_scores, show_critic_scores, critic_sources} = require('../config.json')
+const {show_audience_scores, show_critic_scores, critic_sources, top_two_ratings, show_general_rating} = require('../config.json')
 const { MetadataModel } = require('../models/plexModels')
 
 function displayTitleYearString(title, year){
@@ -27,12 +27,16 @@ function capitolFirstContent(type){
 	return capitalizedContent = type.charAt(0).toUpperCase() + type.slice(1) //Capitalize the first letter of the content type
 }
 
-function displayRatingsString(Rating){ //CAP "R" for Rating
+function displayRatingsString(Rating, Metadata){ //CAP "R" for Rating
 	const sourceImageDisplayNames = {
 	"imdb": "IMDB",
 	"rottentomatoes": "Rotten Tomatoes",
 	"themoviedb": "The Movie DB",
 	};
+
+	if (show_general_rating === true && Metadata?.audienceRating) { //change show_general_rating to true to show general rating
+		return `• __Rating: ${Metadata.audienceRating}__`;
+	}
 	var ratingsString = " "
     
     var sourcesWanted =  critic_sources.map(item => {
@@ -57,6 +61,45 @@ function displayRatingsString(Rating){ //CAP "R" for Rating
 	return "•" + "\_\_" + ratingsString + "\_\_" //Underlined rating
 }
 
+function displayTopTwoRatings(Rating) {
+	if (!top_two_ratings) return "";
+	 const sourceImageDisplayNames = {
+        "rottentomatoes": "Rotten Tomatoes"
+    };
+
+    let highestCriticRating = null;
+    let highestAudienceRating = null;
+
+    Rating.forEach(rating => {
+        const source = rating.image.match(/^([a-z]+):\/\//i)?.[1];
+        if (source !== "rottentomatoes") return;
+
+        if (rating.type === "critic") {
+            if (!highestCriticRating || rating.value > highestCriticRating.value) {
+                highestCriticRating = rating;
+            }
+        } else if (rating.type === "audience") {
+            if (!highestAudienceRating || rating.value > highestAudienceRating.value) {
+                highestAudienceRating = rating;
+            }
+        }
+    });
+
+    let ratingsString = "";
+
+	if (highestCriticRating) {
+		ratingsString += `${sourceImageDisplayNames["rottentomatoes"]}: ${highestCriticRating.value} (${capitolFirstLetter(highestCriticRating)}) `;
+	}
+
+	if (highestAudienceRating) {
+		ratingsString += `${sourceImageDisplayNames["rottentomatoes"]}: ${highestAudienceRating.value} (${capitolFirstLetter(highestAudienceRating)}) `;
+	}
+
+	return ratingsString ? "• __" + ratingsString.trim() + "__" : "";
+}
+
+
+
 function displayGenresString(genre) {
 	if (!Array.isArray(genre) || genre.length === 0) {
 		return "\*" + "n/a" + "\*"; // Italics genre not provided
@@ -79,5 +122,6 @@ module.exports = {
     capitolFirstLetter,
     displaySummaryString,
     displayTitleYearString,
-	displayNewContentString
+	displayNewContentString,
+	displayTopTwoRatings
 }
