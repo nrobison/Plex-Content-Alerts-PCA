@@ -1,5 +1,5 @@
 const {blockQuote, bold, italic, underline} = require('discord.js')
-const {show_audience_scores, show_critic_scores, critic_sources, top_two_ratings, show_general_rating} = require('../config.json')
+const {show_audience_scores, show_critic_scores, critic_sources, top_two_ratings, show_general_rating, custom_message} = require('../config.json')
 const { MetadataModel } = require('../models/plexModels')
 
 function displayTitleYearString(title, year){
@@ -27,7 +27,7 @@ function capitolFirstContent(type){
 	return capitalizedContent = type.charAt(0).toUpperCase() + type.slice(1) //Capitalize the first letter of the content type
 }
 
-function displayRatingsString(Rating, Metadata){ //CAP "R" for Rating
+function displayRatingsString(Rating, Metadata, isCustom = false){ //CAP "R" for Rating
 	const sourceImageDisplayNames = {
 	"imdb": "IMDB",
 	"rottentomatoes": "Rotten Tomatoes",
@@ -57,7 +57,7 @@ function displayRatingsString(Rating, Metadata){ //CAP "R" for Rating
 		    "(" + capitolFirstLetter(Rating) + ")" +" "
         }
 	});
-
+	if(isCustom)return ratingsString
 	return "•" + "\_\_" + ratingsString + "\_\_" //Underlined rating
 }
 
@@ -116,6 +116,36 @@ function displayGenresString(genre) {
 	return "\*" + genresString + "\*"; // Italics genre
 }
 
+function processCustomMessage(data){
+	var markup = custom_message
+	//Process each possible variables
+	markup = markup.replaceAll(/\{title\}/g, data.Metadata.title)
+	markup = markup.replaceAll(/\{year\}/g, data.Metadata.year)
+	markup = processCustomRatings(markup,data.Metadata.Rating)
+//	markup = 
+	markup = markup.replaceAll(/\{summary\}/g, data.Metadata.summary)
+	return markup
+}
+
+function processCustomRatings(message,Ratings){
+	//Each possible source
+	Ratings.forEach(rating => {
+		const ratingsSource = rating.image.match(/^([a-z]+):\/\//i)?.[1];
+		const ratingString =  "/\{" + ratingsSource +"." + rating.type + "\}/g"
+		message = message.replaceAll(ratingString)
+	})
+	return message
+}
+
+function processCustomGenre(message,genre){
+		if (!Array.isArray(genre) || genre.length === 0) {
+			return message.replaceAll(/\{genre\[\d+\]\}/g, "N/A")
+	}
+}
+
+
+
+
 module.exports = {
     displayGenresString,
     displayRatingsString,
@@ -123,5 +153,6 @@ module.exports = {
     displaySummaryString,
     displayTitleYearString,
 	displayNewContentString,
-	displayTopTwoRatings
+	displayTopTwoRatings,
+	processCustomMessage
 }

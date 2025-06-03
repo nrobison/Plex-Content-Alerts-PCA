@@ -1,0 +1,13 @@
+{
+    "token" : "Discord Bot Token",
+    "guild_id" : "Discord Server ID",
+    "channel_id" : "Discord Channel ID",
+    "show_scores" : true,
+    "show_audience_scores": true,
+    "show_critic_scores" : true,
+    "show_genres" : true,
+    "max_genres_to_show" : 2,
+    "critic_sources" : ["rotten tomatoes","imdb","tmdb"],
+    "custom_message" : " ## New Content Added: :projector: \n ** {title} ({year}) ** __ Rating: {rating} __ *Genre: {genre}* \n > {summary}",
+    "whitelist_ip" : ["::1","127.0.0.1"]
+}
