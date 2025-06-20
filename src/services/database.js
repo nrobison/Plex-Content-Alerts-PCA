@@ -20,9 +20,21 @@ function insertActivity(showTitle, episodeTitle, timestamp) {
     INSERT INTO plex_activity (show_title, episode_title, timestamp)
     VALUES (?, ?, ?)
   `);
-  stmt.run(showTitle, episodeTitle, timestamp);
+  stmt.run(showTitle, episodeTitle, timestamp); //timestamp is ZT by default 
+}
+
+function findRecentActivity(title) {
+  const stmt = db.prepare(`SELECT * FROM plex_activity WHERE show_title = ? ORDER BY timestamp DESC LIMIT 1`);
+  return stmt.get(title);
+}
+
+function updateActivityTimestamp(title, newTimestamp) {
+  const stmt = db.prepare(`UPDATE plex_activity SET timestamp = ? WHERE show_title = ?`);
+  stmt.run(newTimestamp, title);
 }
 
 module.exports = {
-  insertActivity
+  insertActivity,
+  findRecentActivity,
+  updateActivityTimestamp
 };

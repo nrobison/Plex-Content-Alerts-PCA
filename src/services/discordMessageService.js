@@ -1,7 +1,8 @@
 
 const {PlexWebhookPayload} = require("../models/plexModels.js") 
-const {guild_id, channel_id,show_genres, show_scores} = require("../config.json")
+const {guild_id, channel_id,show_genres, show_scores, elapsed_time} = require("../config.json")
 const {displayTitleYearString, displayRatingsString, displayGenresString, displaySummaryString, displayNewContentString, displayTopTwoRatings} = require("./markupService.js")
+const {insertActivity, findRecentActivity, updateActivityTimestamp} = require('./database.js')
 
 //title + YEAR is BOLD
 //Genre is italics
@@ -22,16 +23,45 @@ const sendChannelNewContent = (event) => {
 	channel.send(messageToSend)
 }
 
-const processNewWebhookMessage = (payload) =>{
-	var event = new PlexWebhookPayload(payload)
-	console.log(event)
-	//Temporary solution to prevent spamming episodes
-	if(event.event == "library.new" && event.Metadata.type != "episode" & event.Metadata.type != "show" ){
-		sendChannelNewContent(event)
-		return
+// const processNewWebhookMessage = (payload) =>{
+// 	var event = new PlexWebhookPayload(payload)
+// 	console.log(event)
+// 	//Temporary solution to prevent spamming episodes
+// 	if(event.event == "library.new" && event.Metadata.type != "episode" & event.Metadata.type != "show" ){
+// 		sendChannelNewContent(event)
+// 		return
+// 	}
+// }
+const processNewWebhookMessage = (payload) => {
+	const event = new PlexWebhookPayload(payload);
+
+	// Only if library.new content 
+	if (event.event === "library.new") {
+		const showTitle = event.Metadata.grandparentTitle || event.Metadata.title || "Unknown Show";
+		const episodeTitle = event.Metadata.title || "Unknown Episode";
+
+		const now = new Date();
+const nowISO = now.toISOString(); // storage and math; timestamp in ISO and ZT format
+
+const previous = findRecentActivity(showTitle);
+
+if (previous) {
+	const prevTime = new Date(previous.timestamp); // must be parseable
+	const diff = now - prevTime;
+
+	if (diff < elapsed_time) {
+		console.log(`⏱️ Skipping duplicate post for "${showTitle}". Last sent ${Math.round(diff / 60000)} minutes ago.`);
+		return;
+	} else {
+		updateActivityTimestamp(showTitle, nowISO); 
 	}
+} else {
+	insertActivity(showTitle, episodeTitle, nowISO); 
 }
 
+		sendChannelNewContent(event);
+	}
+};
 module.exports = {
 	processNewWebhookMessage
 }
