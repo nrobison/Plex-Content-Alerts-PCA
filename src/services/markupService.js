@@ -220,12 +220,6 @@ function processCustomGenre(message,genre){
 }
 
 
-
-
-
-
-
-
 module.exports = {
     displayGenresString,
     displayRatingsString,

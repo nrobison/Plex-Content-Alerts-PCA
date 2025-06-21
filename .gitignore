@@ -89,3 +89,6 @@ typings/
 
 # Config.json file used for discord.js
 config.json
+
+#DB files
+*.db
