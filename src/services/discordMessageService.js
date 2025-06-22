@@ -9,7 +9,7 @@ const {insertActivity, findRecentActivity, updateActivityTimestamp} = require('.
 const sendChannelNewContent = (event) => {
 	const channel = discordClient.channels.cache.get(channel_id)
 	var messageToSend = ""
-	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.title, event.Metadata.year) + " "
+	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.type, event.Metadata.title, event.Metadata.year, event.Metadata.grandparentTitle) + " "
 	if(show_genres){
 		messageToSend += displayGenresString(event.Metadata.Genre) + "\n"
 	}
