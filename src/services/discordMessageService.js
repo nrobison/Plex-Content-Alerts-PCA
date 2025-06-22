@@ -32,12 +32,13 @@ const processNewWebhookMessage = (payload) => {
 const nowISO = now.toISOString(); //storage and math; timestamp in ISO and ZT format
 
 const previous = findRecentActivity(showTitle);
+const elapsed_time_in_ms = elapsed_time * 60 * 1000; //convert elapsed_time from minutes to milliseconds
 
 	if (previous) {
 		const prevTime = new Date(previous.timestamp); //must be parseable
 		const diff = now - prevTime;
 
-	if (diff < elapsed_time) {
+	if (diff < elapsed_time_in_ms) {
 		console.log(`⏱️ Skipping duplicate post for "${showTitle}". Last sent ${Math.round(diff / 60000)} minutes ago.`);
 		return;
 	} else {
