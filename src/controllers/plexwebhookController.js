@@ -1,5 +1,4 @@
 const {processNewWebhookMessage} = require('../services/discordMessageService.js')
-const { insertActivity, findRecentActivity, updateActivityTimestamp } = require('../services/databaseService.js');
 
 
 const webhookReceived = async(req, res) => {

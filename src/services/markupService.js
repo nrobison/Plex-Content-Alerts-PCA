@@ -1,4 +1,3 @@
-const {blockQuote, bold, italic, underline} = require('discord.js')
 const {show_audience_scores, show_critic_scores, critic_sources, top_two_ratings, show_general_rating, custom_message} = require('../config.json')
 const { MetadataModel } = require('../models/plexModels')
 
