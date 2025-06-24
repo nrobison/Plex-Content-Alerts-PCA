@@ -32,7 +32,7 @@ function displayTitleYearString(type, title, year, grandparentTitle) {
 function displayNewContentString(type){
 	if (type == "movie"){
 	return "\# " + "New Content Added: " + "\:projector:"}
-	else if (type == "episode"){
+	else  {
 	return "\# " + "New Content Added: " + "\:tv:"}
 }
 
