@@ -6,9 +6,9 @@ const { MetadataModel } = require('../models/plexModels')
 
 // }
 
-function displayTitleYearString(type, title, year, grandparentTitle) {
+function displayTitleYearString(type, title, year, parentTitle, grandparentTitle) {
 	if (type === "episode") {
-		return "\*\*" + grandparentTitle + " " + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
+		return "\*\*" + parentTitle + ": " + grandparentTitle + " " + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
 	} else {
 		return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " ";
 	}
@@ -185,7 +185,7 @@ function displayTopTwoRatings(Rating) {
  */
 function displayGenresString(genre) {
 	if (!Array.isArray(genre) || genre.length === 0) {
-		return "\*" + "n/a" + "\*"; // Italics genre not provided
+		return " "; // Italics genre not provided
 	}
 
 	// Sort by Genre.count descending and then take the top 2

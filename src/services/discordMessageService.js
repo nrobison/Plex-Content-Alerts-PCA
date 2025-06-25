@@ -3,13 +3,13 @@ const {PlexWebhookPayload} = require("../models/plexModels.js")
 const {guild_id, channel_id,show_genres, show_scores, elapsed_time} = require("../config.json")
 const {displayTitleYearString, displayRatingsString, displayGenresString, displaySummaryString, displayNewContentString, displayTopTwoRatings} = require("./markupService.js")
 const {insertActivity, findRecentActivity, updateActivityTimestamp} = require('./databaseService.js')
-
+const logger = require('./logPlexDataService.js')
 
 
 const sendChannelNewContent = (event) => {
 	const channel = discordClient.channels.cache.get(channel_id)
 	var messageToSend = ""
-	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.type, event.Metadata.title, event.Metadata.year, event.Metadata.grandparentTitle) + " "
+	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.type, event.Metadata.title, event.Metadata.year, event.Metadata.parentTitle, event.Metadata.grandparentTitle) + " "
 	if(show_genres){
 		messageToSend += displayGenresString(event.Metadata.Genre) + "\n"
 	}
@@ -22,7 +22,8 @@ const sendChannelNewContent = (event) => {
 
 const processNewWebhookMessage = (payload) => {
 	const event = new PlexWebhookPayload(payload);
-
+	//logger info - sends the payload to the logger **logs< plexWebhook.log file
+	logger.info({ webhook: payload });
 	//Only if library.new content 
 	if (event.event === "library.new") {
 		const showTitle = event.Metadata.grandparentTitle || event.Metadata.title || "Unknown Show";
