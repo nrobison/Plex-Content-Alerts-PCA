@@ -1,15 +1,12 @@
 const {show_audience_scores, show_critic_scores, critic_sources, top_two_ratings, show_general_rating, custom_message} = require('../config.json')
 const { MetadataModel } = require('../models/plexModels')
 
-// function displayTitleYearString(title, year){
-// 	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " "  //Bold title and year)
 
-// }
 
 function displayTitleYearString(type, title, year, grandparentTitle, parentIndex, index) {
 	if (type === "episode") {
-		return "\*" + "(" + "s" + parentIndex + ":" + "e" + index + ")" + " " + "\*" + " " + "\*\*" + grandparentTitle + " " + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
-	} else {
+		return "\*\*" + grandparentTitle  + "\*\*" + " " + "\*" + "(" + "s" + parentIndex + ":" + "e" + index + ")" + "\*" + " " + "\*\*" + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
+	} else { 
 		return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " ";
 	}
 }
