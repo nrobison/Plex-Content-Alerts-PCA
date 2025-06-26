@@ -6,9 +6,9 @@ const { MetadataModel } = require('../models/plexModels')
 
 // }
 
-function displayTitleYearString(type, title, year, parentTitle, grandparentTitle) {
+function displayTitleYearString(type, title, year, grandparentTitle, parentIndex, index) {
 	if (type === "episode") {
-		return "\*\*" + parentTitle + ": " + grandparentTitle + " " + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
+		return "\*" + "(" + "s" + parentIndex + ":" + "e" + index + ")" + " " + "\*" + " " + "\*\*" + grandparentTitle + " " + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
 	} else {
 		return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " ";
 	}

@@ -9,7 +9,7 @@ const logger = require('./logPlexDataService.js')
 const sendChannelNewContent = (event) => {
 	const channel = discordClient.channels.cache.get(channel_id)
 	var messageToSend = ""
-	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.type, event.Metadata.title, event.Metadata.year, event.Metadata.parentTitle, event.Metadata.grandparentTitle) + " "
+	messageToSend += displayNewContentString(event.Metadata.type) + "\n" + displayTitleYearString(event.Metadata.type, event.Metadata.title, event.Metadata.year, event.Metadata.grandparentTitle, event.Metadata.parentIndex, event.Metadata.index) + " "
 	if(show_genres){
 		messageToSend += displayGenresString(event.Metadata.Genre) + "\n"
 	}
