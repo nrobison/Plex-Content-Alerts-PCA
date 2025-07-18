@@ -20,7 +20,7 @@ function insertActivity(showTitle, episodeTitle, timestamp) {
     INSERT INTO plex_activity (show_title, episode_title, timestamp)
     VALUES (?, ?, ?)
   `);
-  stmt.run(showTitle, episodeTitle, timestamp); //timestamp is ZT by default 
+  stmt.run(showTitle, episodeTitle, timestamp); //timestamp is UTC by default 
 }
 
 function findRecentActivity(title) {
