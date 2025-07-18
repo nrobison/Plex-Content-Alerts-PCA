@@ -5,7 +5,7 @@ const { combine, timestamp, json, prettyPrint } = format;
 const logger = createLogger({
   level: 'info',
   format: combine(
-    timestamp(), //ZT timestamp
+    timestamp(), //UTC timestamp
     format((info) => {
       //Local timestamp for easier viewing
       info.timestamp_local = new Date().toLocaleString('en-US', {
