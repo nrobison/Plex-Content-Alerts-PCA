@@ -9,5 +9,7 @@
     "max_genres_to_show" : 2,
     "critic_sources" : ["rotten tomatoes","imdb","tmdb"],
     "custom_message" : " ## New Content Added: :projector: \n ** {title} ({year}) ** __ Rating: {rating} __ *Genre: {genre}* \n > {summary}",
-    "whitelist_ip" : ["::1","127.0.0.1"]
+    "whitelist_ip" : ["::1","127.0.0.1"],
+    "elapsed_time" : 720,
+    "elapsed_time_comment" : "720 minutes is 12 hours" 
 }

@@ -1,10 +1,14 @@
-const {blockQuote, bold, italic, underline} = require('discord.js')
 const {show_audience_scores, show_critic_scores, critic_sources, top_two_ratings, show_general_rating, custom_message} = require('../config.json')
 const { MetadataModel } = require('../models/plexModels')
 
-function displayTitleYearString(title, year){
-	return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " "  //Bold title and year)
 
+
+function displayTitleYearString(type, title, year, grandparentTitle, parentIndex, index) {
+	if (type === "episode") {
+		return "\*\*" + grandparentTitle  + "\*\*" + " " + "\*" + "(" + "s" + parentIndex + ":" + "e" + index + ")" + "\*" + " " + "\*\*" + "-" + " " + title + " " + "(" + year + ")" + "\*\*" + " ";
+	} else { 
+		return "\*\*" + title + " " + "(" + year + ")" + "\*\*" + " ";
+	}
 }
 
 /**
@@ -25,7 +29,7 @@ function displayTitleYearString(title, year){
 function displayNewContentString(type){
 	if (type == "movie"){
 	return "\# " + "New Content Added: " + "\:projector:"}
-	else if (type == "episode"){
+	else  {
 	return "\# " + "New Content Added: " + "\:tv:"}
 }
 
@@ -178,7 +182,7 @@ function displayTopTwoRatings(Rating) {
  */
 function displayGenresString(genre) {
 	if (!Array.isArray(genre) || genre.length === 0) {
-		return "\*" + "n/a" + "\*"; // Italics genre not provided
+		return " "; // Italics genre not provided
 	}
 
 	// Sort by Genre.count descending and then take the top 2
@@ -218,12 +222,6 @@ function processCustomGenre(message,genre){
 			return message.replaceAll(/\{genre\[\d+\]\}/g, "N/A")
 	}
 }
-
-
-
-
-
-
 
 
 module.exports = {
