@@ -30,7 +30,7 @@ const processNewWebhookMessage = (payload) => {
 		const episodeTitle = event.Metadata.title || "Unknown Episode";
 
 		const now = new Date();
-const nowISO = now.toISOString(); //storage and math; timestamp in ISO and ZT format
+const nowISO = now.toISOString(); //storage and math; timestamp in ISO and UTC format
 
 const previous = findRecentActivity(showTitle);
 const elapsed_time_in_ms = elapsed_time * 60 * 1000; //convert elapsed_time from minutes to milliseconds
