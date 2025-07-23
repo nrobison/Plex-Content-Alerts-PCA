@@ -11,7 +11,7 @@ Example of a Movie addition to plex with the default settings enabled.
 
 Example of a TV show addition to plex with default settings enabled
 
-<img src='.\ReadMe\Alert-Tv-Example.png' alt='Downton Abbey S2:E1 addition'>
+<img src='.\Readme\Alert-Tv-Example.png' alt='Downton Abbey S2:E1 addition'>
 
 ## Pre-requestes 
 1. Node installed - Available [here](https://nodejs.org/en/download)
