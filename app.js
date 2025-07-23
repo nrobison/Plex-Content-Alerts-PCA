@@ -1,4 +1,4 @@
-const {whitelist_ip} = require('./src/config.json')
+const {whitelist_ip,whitelist_enable} = require('./src/config.json')
 // Require express and multer
 const express = require("express")
 
@@ -7,12 +7,17 @@ const app = express()
 
 //Quick attempt at whitelist IPs 
 app.use((req, res, next) => {
-    if(whitelist_ip.includes(req.connection.remoteAddress)){
+    if(whitelist_enable == false){
         next()
     }
     else{
-        const error = new Error("IP not in whitelist. Rejecting " + req.connection.remoteAddress)
-        next(error);
+        if(whitelist_ip.includes(req.connection.remoteAddress)){
+            next()
+        }
+        else{
+            const error = new Error("IP not in whitelist. Rejecting " + req.connection.remoteAddress)
+            next(error);
+        }
     }
 })
 
