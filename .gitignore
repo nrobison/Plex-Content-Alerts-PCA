@@ -87,8 +87,5 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-# Config.json file used for discord.js
-config.json
-
 #DB files
 *.db
